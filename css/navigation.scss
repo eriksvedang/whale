@@ -1,0 +1,41 @@
+nav {
+	margin: -5px auto 0px auto;
+	line-height: 2.5em;
+	background: $dark;
+}
+
+.nav-item {	
+	border-radius: 3px;
+
+	display: inline-block; 
+	width: 49%;
+	padding: 0em;
+	
+	text-align: center;
+	font-size: 1.1em;
+}
+
+@media all and (min-width: 600px) {
+	nav {
+		padding-left: 12px;
+		padding-right: 12px;
+	
+		display: flex;
+        justify-content: space-between;
+
+        display: -webkit-flex;
+		-webkit-justify-content: space-between;
+	}
+	.nav-item {
+		font-size: 1.0em;
+		width: 16%;
+		width: inherit;
+	}
+}
+
+.top-stop {
+	height: 10px;
+	width: 100%;
+	background-color: $dark;
+}
+
