@@ -1,6 +1,6 @@
 <nav id="navigation">
 	<a class="nav-item" href="/">Introduktion</a>
 	<a class="nav-item" href="/news.html">News</a>
-    <a class="nav-item" href="/news.html">Sponsors</a>
+  <a class="nav-item" href="/news.html">Sponsors</a>
 	<a class="nav-item" href="/contact.html">Contact</a>
 </nav>
