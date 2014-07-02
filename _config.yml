@@ -1,6 +1,7 @@
 ---
 #permalink: pretty
 encoding: UTF-8
+markdown: kramdown
 name: Chasing the Whale
 url: http://www.chasingthewhale.cc
 copyright: "Erik Svedäng &amp; Andreas Zecher"
