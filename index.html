@@ -1,8 +1,16 @@
 ---
 layout: front
-title: CHASING THE WHALE
+title: Chasing the Whale Podcast
 ---
 
-<p>
-	Hello and welcome!
-</p>
+<ul>
+	{% for post in site.posts %}
+	<li class="post">
+		<p>
+			<em> {{ post.title }} </em> 
+			<p class="post-date"> {{ post.date | date: "%-d %B %Y" }} </p>
+			<p> {{ post.content }} </p>
+		</p>
+	</li>
+	{% endfor %}
+</ul>
