@@ -7,7 +7,7 @@ title: Chasing the Whale Podcast
 	{% for post in site.posts %}
 	<li class="post">
 		<p>
-			<em> {{ post.title }} </em> 
+			<em><a href="{{ post.permalink }}">{{ post.title }}</a></em> 
 			<p class="post-date"> {{ post.date | date: "%-d %B %Y" }} </p>
 			<p> {{ post.content }} </p>
 		</p>
