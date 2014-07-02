@@ -4,55 +4,15 @@
 
 <channel>
 
-<title>Chasing the Whale</title>
-
-<link>http://www.chasingthewhale.cc</link>
-
-<language>en-GB</language>
-
-<itunes:subtitle>A programme about everything</itunes:subtitle>
-
-<itunes:author>Erik Svedäng &amp; Andreas Zecher</itunes:author>
-
-<itunes:summary>All About Everything is a programme about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our Podcast in the iTunes Store</itunes:summary>
-
-<description>All About Everything is a programme about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our Podcast in the iTunes Store</description>
-
-<itunes:owner>
-
-<itunes:name>Andreas Zecher</itunes:name>
-
-<itunes:email>andreas@madebypixelate.com</itunes:email>
-
-</itunes:owner>
-
-<itunes:image href="http://example.com/podcasts/everything/AllAboutEverything.jpg" />
-
-<itunes:category text="Games &amp; Hobbies">
-
-<itunes:category text="Video Games"/>
-
-</itunes:category>
-
 {% for post in site.posts %}
 
 <item>
-
-<title>{{ post.title }}</title>
-
-<itunes:author>John Smith</itunes:author>
-
-<itunes:subtitle>A short introduction to table spices</itunes:subtitle>
-
-<itunes:summary>This week we talk about salt and pepper shakers, comparing and contrasting pour rates, construction materials and overall aesthetics. Come and join the party!</itunes:summary>
 
 <itunes:image href="http://example.com/podcasts/everything/AllAboutEverything/Episode1.jpg" />
 
 <enclosure url="http://example.com/podcasts/everything/AllAboutEverythingEpisode3.m4a" length="8727310" type="audio/x-m4a" />
 
 <guid>http://example.com/podcasts/archive/aae20050615.m4a</guid>
-
-<pubDate>Wed, 15 Jun 2005 19:00:00 GMT</pubDate>
 
 <itunes:duration>7:04</itunes:duration>
 

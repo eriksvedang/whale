@@ -39,12 +39,22 @@ module Jekyll
       rss = RSS::Maker.make("2.0") do |maker|
         maker.channel.title = site.config['name']
         maker.channel.link = site.config['url']
-        maker.channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"
+        maker.channel.description = site.config['description']
         maker.channel.author = site.config["author"]
-        maker.channel.updated = site.posts.map { |p| p.date  }.max
+        maker.channel.updated = site.posts.map { |p| p.date }.max
         maker.channel.copyright = site.config['copyright']
-        maker.channel.itunes_author = site.config['itunes_author']
-
+        maker.channel.language = site.config['language']
+        maker.channel.itunes_subtitle = site.config['subtitle']
+        maker.channel.itunes_author = site.config['author']
+        maker.channel.itunes_summary = site.config['description']
+        maker.channel.itunes_owner.itunes_name = site.config['author']
+        maker.channel.itunes_owner.itunes_email = site.config['email']
+        maker.channel.itunes_image = site.config['cover']
+        
+        category = maker.channel.itunes_categories.new_category
+        category.text = site.config['category']
+        category.new_category.text = site.config['subcategory']
+        
         post_limit = (site.config['rss_post_limit'] - 1 rescue site.posts.count)
 
         site.posts.reverse[0..post_limit].each do |post|
@@ -56,6 +66,10 @@ module Jekyll
             item.link = link
             item.description = post.excerpt
             item.updated = post.date
+            item.itunes_author = site.config['author']
+            item.itunes_subtitle = post.data['subtitle']
+            item.itunes_summary = post.content
+#            item.itunes_image = site.config['cover']
           end
         end
       end

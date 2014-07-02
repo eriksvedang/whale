@@ -4,5 +4,12 @@ encoding: UTF-8
 name: Chasing the Whale
 url: http://www.chasingthewhale.cc
 copyright: "Erik Svedäng &amp; Andreas Zecher"
-itunes_author: "Erik Svedäng &amp; Andreas Zecher"
+author: "Erik Svedäng &amp; Andreas Zecher"
+language: "en-GB"
+subtitle: "A slow talk show about independent games and related topics."
+description: "Chasing the Whale is a weekly podcast about independent games and related topics by Erik Svedäng and Andreas Zecher. New episode every Tuesday."
+email: "podcast@chasingthewhale.cc"
+cover: "http://www.chasingthewhale.cc/img/cover.png"
+category: "Games &amp; Hobbies"
+subcategory: "Video Games"
 ---
