@@ -24,6 +24,7 @@ module Jekyll
   class RssFeed < Page; end
 
   class RssGenerator < Generator
+    require 'net/http'
     priority :low
     safe true
 
@@ -64,11 +65,15 @@ module Jekyll
             item.guid.content = link
             item.title = post.title
             item.link = link
-            item.description = post.excerpt
+            item.description = "<![CDATA[" + post.content + "]]>"
             item.updated = post.date
             item.itunes_author = site.config['author']
             item.itunes_subtitle = post.data['subtitle']
-            item.itunes_summary = post.content
+            item.itunes_summary = post.excerpt
+            item.enclosure.url = post.data['audio_file_url']
+            item.enclosure.type = "audio/mpeg"
+            item.enclosure.length = get_file_size(post.data['audio_file_url'])   
+            
 #            item.itunes_image = site.config['cover']
           end
         end
@@ -86,6 +91,14 @@ module Jekyll
     end
 
     private
+
+    def get_file_size(url) 
+      uri = URI.parse(url)
+      res = Net::HTTP.start(uri.host, uri.port) do |http| 
+        http.head(uri.path) 
+      end
+      res['content-length']
+    end
 
     # Ensures the given path has leading and trailing slashes
     #

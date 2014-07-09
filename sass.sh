@@ -1,1 +1,0 @@
-sass --watch css/combined.scss:css/combined.css --style compressed

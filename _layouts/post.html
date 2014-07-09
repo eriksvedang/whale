@@ -1,0 +1,10 @@
+---
+layout: base
+---
+
+<em>{{ page.title }}</em> 
+<p class="post-date">{{ page.date | date: "%-d %B %Y" }}</p>
+
+{% include _soundcloud_player.html soundcloud_id=page.soundcloud_id %}
+
+{{ content }}

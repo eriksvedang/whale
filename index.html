@@ -1,5 +1,5 @@
 ---
-layout: front
+layout: base
 title: Chasing the Whale Podcast
 ---
 
@@ -9,6 +9,8 @@ title: Chasing the Whale Podcast
 		<p>
 			<em><a href="{{ post.permalink }}">{{ post.title }}</a></em> 
 			<p class="post-date"> {{ post.date | date: "%-d %B %Y" }} </p>
+
+      {% include _soundcloud_player.html soundcloud_id=post.soundcloud_id %}
 			<p> {{ post.content }} </p>
 		</p>
 	</li>
