@@ -2,8 +2,12 @@
 #permalink: pretty
 encoding: UTF-8
 markdown: redcarpet
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
 name: Chasing the Whale
 url: http://www.chasingthewhale.cc
+sass:
+  sass_dir: _scss
+  style: :compressed
 copyright: "Erik Svedäng &amp; Andreas Zecher"
 author: "Erik Svedäng &amp; Andreas Zecher"
 language: "en-GB"
@@ -13,7 +17,4 @@ email: "podcast@chasingthewhale.cc"
 cover: "http://www.chasingthewhale.cc/img/cover.png"
 category: "Games &amp; Hobbies"
 subcategory: "Video Games"
-sass:
-  sass_dir: _scss
-  style: :compressed
 ---

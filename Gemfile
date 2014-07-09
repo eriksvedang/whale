@@ -1,2 +1,3 @@
 source 'https://rubygems.org'
-gem 'github-pages'
+ruby '2.1.2'
+gem 'jekyll', '2.1.0'
