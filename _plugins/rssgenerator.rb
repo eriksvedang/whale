@@ -34,7 +34,6 @@ module Jekyll
     #
     # Returns nothing
     def generate(site)
-      require "rexml/cdata"
       require 'rss'
 
       # Create the rss with the help of the RSS module
@@ -71,13 +70,14 @@ module Jekyll
             item.itunes_author = site.config['author']
             item.itunes_subtitle = post.data['subtitle']
             item.itunes_summary = post.excerpt
+            item.itunes_duration = post.data['duration']
+            item.itunes_keywords = post.data['keywords']
             item.enclosure.url = post.data['audio_file_url']
             item.enclosure.type = "audio/mpeg"
             item.enclosure.length = get_file_size(post.data['audio_file_url'])   
           end
         end
       end
- 
 
       # Ruby RSS lib doesn't have a documented way of using CDATA, so we're replacing it in post.
  
