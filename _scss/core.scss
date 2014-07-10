@@ -3,7 +3,14 @@ $secondary-color: rgb(100, 255, 255);
 $dark: rgb(20, 20, 20);
 
 * { box-sizing: border-box; -moz-box-sizing: border-box; }
-body { font-family: 'Varela', sans-serif; background: white; color: #333; }
+body { 
+  font-family: "source-code-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: white;
+  color: #333;
+  font-size: 13px;
+}
 h1 { font-size: 1.6em; }
 p { margin-top: 0.5em; margin-top: 0.5em; line-height: 1.5em; }
 .new-section { margin-top: 2em; }
@@ -14,7 +21,6 @@ a:hover { color: $secondary-color; }
 
 li {
   margin-top: 10px;
-  font-size: 0.95em;
 }
 
 ul {
@@ -35,14 +41,6 @@ ul {
     box-sizing: content-box; 
     -moz-box-sizing: content-box;
 }
-
-// @media all and (min-width: 600px) {
-//     .information {
-//         -moz-columns:2;
-//         -webkit-columns:2;
-//         columns:2;
-//     }
-// }
 
 footer {
     width: 100%;
