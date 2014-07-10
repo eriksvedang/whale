@@ -34,6 +34,7 @@ module Jekyll
     #
     # Returns nothing
     def generate(site)
+      require "rexml/cdata"
       require 'rss'
 
       # Create the rss with the help of the RSS module
@@ -65,7 +66,7 @@ module Jekyll
             item.guid.content = link
             item.title = post.title
             item.link = link
-            item.description = "<![CDATA[" + post.content + "]]>"
+            item.description = post.id
             item.updated = post.date
             item.itunes_author = site.config['author']
             item.itunes_subtitle = post.data['subtitle']
@@ -77,8 +78,14 @@ module Jekyll
         end
       end
  
-      rss = rss.to_s.gsub("&lt;![CDATA[", "<![CDATA[").gsub("]]&gt;", "]]>")
-      
+
+      # Ruby RSS lib doesn't have a documented way of using CDATA, so we're replacing it in post.
+ 
+      rss = rss.to_s
+      site.posts.each do |post|
+        rss = rss.gsub("<description>#{post.id}</description>", "<description><![CDATA[#{post.content}]]></description>")
+      end
+ 
       # File creation and writing
       rss_path = ensure_slashes(site.config['rss_path'] || "/")
       rss_name = site.config['rss_name'] || "rss.xml"
