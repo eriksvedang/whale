@@ -46,6 +46,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.0.0)
       listen (~> 2.7)
+    kgio (2.9.2)
     kramdown (1.4.0)
     liquid (2.6.1)
     listen (2.7.9)
@@ -60,6 +61,7 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
+    raindrops (0.13.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -69,6 +71,10 @@ GEM
     timers (1.1.0)
     toml (0.1.1)
       parslet (~> 1.5.0)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -77,3 +83,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 2.1.0)
   rack-jekyll!
+  unicorn (= 4.8.3)
