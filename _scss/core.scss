@@ -9,13 +9,13 @@ body {
   font-weight: 400;
   background: white;
   color: #333;
-  font-size: 13px;
+  font-size: 15px;
   margin: 20px;
 }
 
 .logo {
-  width: 94px;
-  height: 94px;
+  width: 110px;
+  height: 110px;
   float: left;
   margin-right: 10px;
 }
@@ -23,10 +23,19 @@ body {
 h1 { font-size: 1.6em; }
 p { margin-top: 0.5em; margin-top: 0.5em; line-height: 1.5em; }
 .new-section { margin-top: 2em; }
-em { background-color: black; color: white; padding: 2px 4px; border-radius: 3px; letter-spacing: 0.15em; box-sizing: content-box; -moz-box-sizing: content-box; }
 
 a { color: $primary-color; text-decoration: none; }
 a:hover { color: $secondary-color; }
+
+h2 {
+  font-size: 17px;
+  background-color: rgb(230, 230, 230); 
+  padding: 6px 6px; 
+  border-radius: 3px; 
+  letter-spacing: 0.15em; 
+  box-sizing: content-box; 
+  -moz-box-sizing: content-box;
+}
 
 li {
   margin-top: 10px;

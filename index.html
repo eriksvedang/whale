@@ -7,7 +7,7 @@ title: Chasing the Whale Podcast
 	{% for post in site.posts %}
 	<li class="post">
 		<p>
-			<em><a href="{{ post.permalink }}">{{ post.title }}</a></em> 
+			<h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2> 
 			<p class="post-date"> {{ post.date | date: "%-d %B %Y" }} </p>
 
       {% include _soundcloud_player.html soundcloud_id=post.soundcloud_id %}
