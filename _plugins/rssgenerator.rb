@@ -78,7 +78,9 @@ module Jekyll
           end
         end
       end
-
+ 
+      rss = rss.to_s.gsub("&lt;![CDATA[&lt;p&gt;", "<![CDATA[").gsub("]]&gt;", "]]>")
+      
       # File creation and writing
       rss_path = ensure_slashes(site.config['rss_path'] || "/")
       rss_name = site.config['rss_name'] || "rss.xml"
