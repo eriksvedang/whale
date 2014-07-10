@@ -73,13 +73,11 @@ module Jekyll
             item.enclosure.url = post.data['audio_file_url']
             item.enclosure.type = "audio/mpeg"
             item.enclosure.length = get_file_size(post.data['audio_file_url'])   
-            
-#            item.itunes_image = site.config['cover']
           end
         end
       end
  
-      rss = rss.to_s.gsub("&lt;![CDATA[&lt;p&gt;", "<![CDATA[").gsub("]]&gt;", "]]>")
+      rss = rss.to_s.gsub("&lt;![CDATA[", "<![CDATA[").gsub("]]&gt;", "]]>")
       
       # File creation and writing
       rss_path = ensure_slashes(site.config['rss_path'] || "/")
