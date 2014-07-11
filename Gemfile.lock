@@ -61,6 +61,8 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
+    rack-www (1.5.0)
+      rack
     raindrops (0.13.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
@@ -83,4 +85,5 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 2.1.0)
   rack-jekyll!
+  rack-www (= 1.5.0)
   unicorn (= 4.8.3)
