@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.5.8'
 gem 'jekyll', '2.1.0'
-gem 'rack-jekyll', github: 'hsbt/rack-jekyll', branch: 'upgrade-jekyll2'
+gem 'rack-jekyll'
 gem 'rack-www', '1.5.0'
 gem 'unicorn', '4.8.3'
