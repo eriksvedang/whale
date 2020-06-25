@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.5.8'
-gem 'jekyll', '2.1.0'
+gem 'jekyll', '3.6.3'
 gem 'rack-jekyll'
 gem 'rack-www', '1.5.0'
 gem 'unicorn', '4.8.3'
